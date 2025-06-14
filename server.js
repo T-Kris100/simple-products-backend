@@ -30,9 +30,10 @@ app.get('/', (req, res) => {
 
 connectDB();
 
-// app.listen(PORT, () => {
-//    console.log('Server started at http://localhost:' + PORT);
-// });
+app.listen(PORT, () => {
+   console.log('Server started at http://localhost:' + PORT);
+});
 
 // db password
 // TE9RReePxHOfDN1e
+export default app;
