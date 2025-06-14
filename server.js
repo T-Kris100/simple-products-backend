@@ -28,9 +28,9 @@ app.get('/', (req, res) => {
    res.json({ message: 'Hello from backend' });
 });
 
-app.listen(PORT, () => {
-   connectDB();
-   console.log('Server started at http://localhost:' + PORT);
-});
+// app.listen(PORT, () => {
+//    connectDB();
+//    console.log('Server started at http://localhost:' + PORT);
+// });
 // db password
 // TE9RReePxHOfDN1e
