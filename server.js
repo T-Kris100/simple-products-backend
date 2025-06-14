@@ -1,5 +1,6 @@
 import express from 'express';
 import dotenv from 'dotenv';
+const cors = require('cors');
 
 import { connectDB } from './src/config/db.js';
 
@@ -11,6 +12,15 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(express.json());
+app.use(
+   cors({
+      origin: [
+         'http://localhost:5173',
+         'https://simple-prodcts-frontend.vercel.app',
+      ],
+      credentials: true,
+   })
+);
 
 app.use('/api/products', productRoutes);
 
